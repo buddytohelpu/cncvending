@@ -83,10 +83,11 @@ export function Navbar() {
                   "flex items-center space-x-2 text-base font-medium transition-colors duration-200",
                   isScrolled
                     ? "text-slate-600 hover:text-emerald-600"
-                    : "text-white/90 hover:text-white"
+                    : "text-white hover:text-white"
                 )}
+                aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" aria-hidden="true" />
                 <span>{siteConfig.contact.phoneFormatted}</span>
               </a>
               <Button onClick={handleQuoteClick} size="md">

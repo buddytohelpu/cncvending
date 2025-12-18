@@ -67,7 +67,7 @@ export function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed">
               Fast restocking. Modern payment options. Custom product selection.
               White-glove service from a family-owned company that treats your
               business like our own.

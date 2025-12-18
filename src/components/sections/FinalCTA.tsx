@@ -41,7 +41,7 @@ export function FinalCTA() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Upgrade Your Break Room?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white mb-8">
               Get a quote in 24 hours. No obligation, no pressure—just
               personalized recommendations for your space.
             </p>
@@ -52,8 +52,9 @@ export function FinalCTA() {
                 href={`tel:${siteConfig.contact.phone}`}
                 onClick={() => trackPhoneClick()}
                 className="inline-flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-4 hover:bg-white/20 transition-colors"
+                aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" aria-hidden="true" />
                 <span className="font-semibold">
                   {siteConfig.contact.phoneFormatted}
                 </span>
@@ -62,8 +63,9 @@ export function FinalCTA() {
                 href={`mailto:${siteConfig.contact.email}`}
                 onClick={() => trackEmailClick()}
                 className="inline-flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-4 hover:bg-white/20 transition-colors"
+                aria-label={`Email ${siteConfig.contact.email}`}
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" aria-hidden="true" />
                 <span className="font-semibold">{siteConfig.contact.email}</span>
               </a>
             </div>

@@ -42,16 +42,18 @@ export function SolutionCTA({ solution }: SolutionCTAProps) {
               href={`tel:${siteConfig.contact.phone}`}
               onClick={() => trackPhoneClick()}
               className="flex items-center space-x-2 hover:text-emerald-400 transition-colors"
+              aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5" aria-hidden="true" />
               <span>{siteConfig.contact.phoneFormatted}</span>
             </a>
             <a
               href={`mailto:${siteConfig.contact.email}`}
               onClick={() => trackEmailClick()}
               className="flex items-center space-x-2 hover:text-emerald-400 transition-colors"
+              aria-label={`Email ${siteConfig.contact.email}`}
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" aria-hidden="true" />
               <span>{siteConfig.contact.email}</span>
             </a>
           </div>

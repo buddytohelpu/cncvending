@@ -63,8 +63,9 @@ export function Solutions() {
                 <Link
                   href={solution.slug}
                   className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 group/link"
+                  aria-label={`Learn more about ${solution.name}`}
                 >
-                  Learn more
+                  Learn more about {solution.name}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -79,8 +80,9 @@ export function Solutions() {
             <Link
               href="/solutions/vending"
               className="text-emerald-600 font-semibold hover:underline"
+              aria-label="Learn more about traditional vending solutions"
             >
-              We do that too →
+              Learn about traditional vending →
             </Link>
           </p>
         </div>

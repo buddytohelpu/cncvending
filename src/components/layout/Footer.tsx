@@ -101,8 +101,9 @@ export function Footer() {
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
                   className="flex items-center space-x-3 text-slate-400 hover:text-emerald-400 transition-colors"
+                  aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5" aria-hidden="true" />
                   <span>{siteConfig.contact.phoneFormatted}</span>
                 </a>
               </li>
@@ -110,8 +111,9 @@ export function Footer() {
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="flex items-center space-x-3 text-slate-400 hover:text-emerald-400 transition-colors"
+                  aria-label={`Email ${siteConfig.contact.email}`}
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5" aria-hidden="true" />
                   <span>{siteConfig.contact.email}</span>
                 </a>
               </li>
