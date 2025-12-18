@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CNC Vending Website
+
+Premium, enterprise-grade marketing website for CNC Vending - Modern vending solutions for New England businesses.
+
+## Features
+
+- ✅ **Modern Next.js 16** with App Router and TypeScript
+- ✅ **Fully Responsive** design optimized for all devices
+- ✅ **SEO Optimized** with metadata, sitemap, robots.txt, and structured data
+- ✅ **Lead Capture** forms with quote modals and contact forms
+- ✅ **Conversion-Focused** with multiple CTAs and tracking hooks
+- ✅ **Fast Performance** with optimized images and static generation
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Deployment**: Vercel (recommended)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+website/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # React components
+│   │   ├── layout/      # Navbar, Footer
+│   │   ├── sections/    # Page sections
+│   │   ├── forms/       # Form components
+│   │   └── ui/          # Reusable UI components
+│   ├── config/          # Site configuration
+│   └── lib/             # Utilities and helpers
+├── public/
+│   └── images/          # Static images
+└── package.json
+```
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Edit `src/config/site.ts` to update:
+- Company information
+- Contact details
+- Service areas
+- Navigation items
+- Content copy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site includes:
+- ✅ Dynamic metadata for all pages
+- ✅ OpenGraph and Twitter cards
+- ✅ JSON-LD structured data (LocalBusiness schema)
+- ✅ Sitemap.xml (auto-generated)
+- ✅ Robots.txt (auto-generated)
+- ✅ Canonical URLs
+- ✅ Optimized image alt text
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push code to GitHub
+2. Import project in [Vercel](https://vercel.com/new)
+3. Vercel will automatically detect Next.js and deploy
+
+### Environment Variables (Optional)
+
+Create `.env.local` for optional features:
+- Google Analytics tracking ID
+- Google Search Console verification
+
+## Analytics & Tracking
+
+Tracking hooks are set up in `src/lib/tracking.ts`. Replace with your analytics service:
+
+```typescript
+// Example: Google Analytics 4
+if (typeof window !== 'undefined' && window.gtag) {
+  window.gtag('event', event, properties);
+}
+```
+
+## License
+
+© 2024 CNC Vending. All rights reserved.
