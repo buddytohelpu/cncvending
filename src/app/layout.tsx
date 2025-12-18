@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`,
+    default: "CNC Vending | Modern Vending Solutions",
+    template: `%s | CNC Vending`,
   },
   description: siteConfig.description,
   keywords: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    title: "CNC Vending | Modern Vending Solutions",
     description: siteConfig.description,
     images: [
       {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    title: "CNC Vending | Modern Vending Solutions",
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/vending1crop-1.png`],
   },

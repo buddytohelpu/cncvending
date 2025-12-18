@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Modern Vending & Micro-Markets for New England Businesses",
   description:
     "Premium vending solutions, upscale micro-markets, and self-serve kegerators for businesses across New England. Family-owned, white-glove service.",
-  url: "https://cnc-vending.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://cnc-vending.com",
 
   contact: {
     phone: "508-713-1874",

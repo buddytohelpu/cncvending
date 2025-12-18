@@ -88,9 +88,12 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
-        <Dialog.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-lg max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-6 sm:p-8 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95">
+        <Dialog.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[calc(100%-2rem)] max-w-lg max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-5 sm:p-6 md:p-8 mx-4 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95">
           {/* Close Button */}
-          <Dialog.Close className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
+          <Dialog.Close 
+            className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+            aria-label="Close quote form"
+          >
             <X className="w-5 h-5" />
           </Dialog.Close>
 
@@ -196,6 +199,8 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
                             ? "bg-emerald-500 text-white border-emerald-500"
                             : "bg-white text-slate-600 border-slate-200 hover:border-emerald-300"
                         )}
+                        aria-label={`Select ${solution.label}`}
+                        aria-pressed={selectedSolutions.includes(solution.id)}
                       >
                         {solution.label}
                       </button>

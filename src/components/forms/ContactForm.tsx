@@ -169,6 +169,8 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
                     ? "bg-emerald-500 text-white border-emerald-500"
                     : "bg-white text-slate-600 border-slate-200 hover:border-emerald-300"
                 )}
+                aria-label={`Select ${solution.label}`}
+                aria-pressed={selectedSolutions.includes(solution.id)}
               >
                 {solution.label}
               </button>

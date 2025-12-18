@@ -58,7 +58,7 @@ export function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
               Modern Vending &{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
                 Micro-Markets
@@ -67,7 +67,7 @@ export function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed">
               Fast restocking. Modern payment options. Custom product selection.
               White-glove service from a family-owned company that treats your
               business like our own.

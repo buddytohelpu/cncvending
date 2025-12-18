@@ -30,6 +30,13 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Improve touch scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Improve tap targets on mobile */
+  button, a {
+    touch-action: manipulation;
   }
 }
 
