@@ -45,7 +45,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [selectedSolutions, setSelectedSolutions] = useState<string[]>([]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
@@ -53,11 +53,31 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
       return;
     }
 
-    console.log("Form submitted:", Object.fromEntries(formData.entries()));
-    console.log("Selected solutions:", selectedSolutions);
+    const formDataObject = Object.fromEntries(formData.entries());
 
-    trackFormSubmit("contact_form");
-    setSubmitted(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "Contact Form",
+          ...formDataObject,
+          solutions: selectedSolutions.length > 0 ? selectedSolutions.join(", ") : undefined,
+        }),
+      });
+
+      if (response.ok) {
+        trackFormSubmit("contact_form");
+        setSubmitted(true);
+      } else {
+        alert("There was an error sending your message. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error sending your message. Please try again or call us directly.");
+    }
   };
 
   const toggleSolution = (id: string) => {

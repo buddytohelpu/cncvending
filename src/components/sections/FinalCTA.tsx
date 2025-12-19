@@ -10,15 +10,36 @@ import { trackFormSubmit, trackPhoneClick, trackEmailClick } from "@/lib/trackin
 export function FinalCTA() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
     if (formData.get("website")) return;
 
-    console.log("Quick form:", Object.fromEntries(formData.entries()));
-    trackFormSubmit("final_cta");
-    setSubmitted(true);
+    const formDataObject = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "Quick Quote Request",
+          ...formDataObject,
+        }),
+      });
+
+      if (response.ok) {
+        trackFormSubmit("final_cta");
+        setSubmitted(true);
+      } else {
+        alert("There was an error submitting your request. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error submitting your request. Please try again or call us directly.");
+    }
   };
 
   return (

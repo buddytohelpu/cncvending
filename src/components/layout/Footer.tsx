@@ -10,19 +10,8 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block mb-3" aria-label="CNC Vending Home">
-              <Image
-                src="/images/logo-white.png"
-                alt="CNC Vending"
-                width={120}
-                height={120}
-                className="w-32 h-32 sm:w-36 sm:h-36 object-contain object-center scale-110"
-                style={{ marginLeft: '-8px', marginRight: '-8px', marginTop: '-4px', marginBottom: '-4px' }}
-              />
-            </Link>
             <p className="text-slate-400 text-base leading-relaxed mb-4">
-              Premium vending solutions and micro-markets for New England
-              businesses. Family-owned, white-glove service.
+              Premium vending solutions, upscale micro-markets, and coffee & beverage services for businesses within 60 miles of Brookfield, MA. Family-owned, white-glove service.
             </p>
             <div className="flex items-center space-x-2 text-blue-500">
               <MapPin className="w-5 h-5 flex-shrink-0" />
@@ -124,9 +113,20 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-slate-800 mt-8 sm:mt-10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <p className="text-slate-500 text-base">
-            © {new Date().getFullYear()} CNC Vending. All rights reserved.
-          </p>
+          <div className="flex items-center space-x-3">
+            <Link href="/" className="inline-block" aria-label="CNC Vending Home">
+              <Image
+                src="/images/logo-white.png"
+                alt="CNC Vending"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain"
+              />
+            </Link>
+            <p className="text-slate-500 text-base">
+              © {new Date().getFullYear()} CNC Vending. All rights reserved.
+            </p>
+          </div>
           <p className="text-slate-500 text-base">
             Family-owned & operated in {siteConfig.location.region}
           </p>
