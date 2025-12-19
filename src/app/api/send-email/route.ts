@@ -1,18 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "mail.smtp2go.com",
-  port: parseInt(process.env.SMTP_PORT || "2525"),
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER || "cc-cncvending",
-    pass: process.env.SMTP_PASS || "vbl9O3aQe8Caskh6",
-  },
-  tls: {
-    rejectUnauthorized: false,
-  },
-});
+const getTransporter = () => {
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  
+  if (!smtpUser || !smtpPass) {
+    throw new Error("SMTP credentials not configured");
+  }
+
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "mail.smtp2go.com",
+    port: parseInt(process.env.SMTP_PORT || "2525"),
+    secure: false,
+    auth: {
+      user: smtpUser,
+      pass: smtpPass,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+};
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,6 +32,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { formType, ...formData } = body;
+    const transporter = getTransporter();
 
     const subject = `New ${formType || "Contact"} Form Submission - CNC Vending`;
     
@@ -60,7 +70,7 @@ Submitted on: ${new Date().toLocaleString()}
     `;
 
     await transporter.sendMail({
-      from: `"CNC Vending Website" <${process.env.SMTP_USER || "cc-cncvending"}@smtp2go.com>`,
+      from: `"CNC Vending Website" <${process.env.SMTP_USER}@smtp2go.com>`,
       to: "team@cnc-vending.com",
       replyTo: formData.email || "team@cnc-vending.com",
       subject,
@@ -71,10 +81,14 @@ Submitted on: ${new Date().toLocaleString()}
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Email sending error:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { success: false, error: "Failed to send email" },
+      { 
+        success: false, 
+        error: "Failed to send email",
+        details: process.env.NODE_ENV === "development" ? errorMessage : undefined
+      },
       { status: 500 }
     );
   }
 }
-

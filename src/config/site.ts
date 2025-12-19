@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "CNC Vending",
   tagline: "Modern Vending & Micro-Markets for New England Businesses",
   description:
-    "Premium vending machines, upscale micro-markets, and coffee & beverage solutions for businesses within 60 miles of Brookfield, MA. Family-owned, white-glove vending services.",
+    "Premium vending machines, micro-markets & coffee solutions for businesses within 60 miles of Brookfield, MA. Family-owned vending services.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://cnc-vending.com",
 
   contact: {
