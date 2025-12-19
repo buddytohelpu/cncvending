@@ -7,14 +7,14 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Service Area | Serving All of New England",
   description:
-    "CNC Vending proudly serves businesses across Massachusetts, Rhode Island, Connecticut, New Hampshire, Vermont, and Maine. Based in Central Massachusetts.",
+    "CNC Vending serves businesses within 60 miles of Brookfield, Massachusetts, focusing on companies with 100+ employees in Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
   alternates: {
     canonical: `${siteConfig.url}/service-area`,
   },
   openGraph: {
     title: "Service Area | CNC Vending - Proudly Serving New England",
     description:
-      "CNC Vending serves businesses across all six New England states. Based in Central Massachusetts with fast, reliable service throughout the region.",
+      "CNC Vending serves businesses within 60 miles of Brookfield, MA, focusing on large companies (100+ employees) across Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
     url: `${siteConfig.url}/service-area`,
   },
 };
@@ -28,33 +28,25 @@ const regions = [
       "Springfield",
       "Cambridge",
       "Lowell",
-      "Cape Cod",
+      "Framingham",
+      "Waltham",
+      "Natick",
     ],
     primary: true,
   },
   {
     state: "Rhode Island",
-    areas: ["Providence", "Newport", "Warwick", "Cranston"],
+    areas: ["Providence", "Warwick", "Cranston", "Pawtucket"],
     primary: false,
   },
   {
     state: "Connecticut",
-    areas: ["Hartford", "New Haven", "Stamford", "Bridgeport"],
+    areas: ["Hartford", "Enfield", "Vernon"],
     primary: false,
   },
   {
     state: "New Hampshire",
-    areas: ["Manchester", "Nashua", "Concord", "Portsmouth"],
-    primary: false,
-  },
-  {
-    state: "Vermont",
-    areas: ["Burlington", "Montpelier", "Rutland"],
-    primary: false,
-  },
-  {
-    state: "Maine",
-    areas: ["Portland", "Lewiston", "Bangor"],
+    areas: ["Nashua", "Manchester"],
     primary: false,
   },
 ];
@@ -63,8 +55,23 @@ export default function ServiceAreaPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/vending1crop-1.png"
+            alt="CNC Vending Service Area"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
+          {/* Bottom fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center space-x-2 bg-blue-500/20 rounded-full px-4 py-2 mb-6">
               <MapPin className="w-4 h-4 text-blue-400" />
@@ -73,13 +80,11 @@ export default function ServiceAreaPage() {
               </span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Serving <span className="text-blue-400">New England</span>{" "}
-              Businesses
+              Serving <span className="text-blue-400">Your Region</span>
             </h1>
             <p className="text-xl sm:text-2xl text-slate-300">
-              Based in Central Massachusetts, we provide premium vending
-              solutions and responsive service across all six New England
-              states.
+              Based in Brookfield, Massachusetts, we provide premium vending
+              solutions and responsive service within a 60-mile radius, focusing on areas with large businesses.
             </p>
           </div>
         </div>
@@ -107,8 +112,8 @@ export default function ServiceAreaPage() {
                 <span className="text-blue-600">Regional Reach</span>
               </h2>
               <p className="text-xl text-slate-600 mb-8">
-                As a family-owned business based in Central Massachusetts, we
-                understand the unique needs of New England businesses. Our
+                As a family-owned business based in Brookfield, Massachusetts, we
+                serve businesses within a 60-mile radius, with a focus on companies with 100+ employees. Our
                 proximity means faster response times, better service, and a
                 team that truly knows your region.
               </p>
@@ -167,8 +172,7 @@ export default function ServiceAreaPage() {
               Areas We <span className="text-blue-600">Serve</span>
             </h2>
             <p className="text-xl text-slate-600">
-              From Boston to Burlington, Portland to Providence—we&apos;ve got
-              New England covered.
+              Serving major business centers within 60 miles of Brookfield, MA—focusing on areas with large companies and corporate headquarters.
             </p>
           </div>
 

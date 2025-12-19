@@ -85,12 +85,17 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       {/* Honeypot */}
+      <label htmlFor="contact-website-honeypot" className="sr-only">
+        Leave this field empty
+      </label>
       <input
         type="text"
+        id="contact-website-honeypot"
         name="website"
         className="hidden"
         tabIndex={-1}
         autoComplete="off"
+        aria-hidden="true"
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -179,6 +184,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
             type="hidden"
             name="solutions"
             value={selectedSolutions.join(",")}
+            aria-hidden="true"
           />
         </div>
       )}

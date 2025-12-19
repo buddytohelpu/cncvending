@@ -120,12 +120,17 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Honeypot */}
+                <label htmlFor="website-honeypot" className="sr-only">
+                  Leave this field empty
+                </label>
                 <input
                   type="text"
+                  id="website-honeypot"
                   name="website"
                   className="hidden"
                   tabIndex={-1}
                   autoComplete="off"
+                  aria-hidden="true"
                 />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -205,6 +210,7 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
                     type="hidden"
                     name="solutions"
                     value={selectedSolutions.join(",")}
+                    aria-hidden="true"
                   />
                 </div>
 

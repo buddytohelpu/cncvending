@@ -94,12 +94,17 @@ export function FinalCTA() {
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <label htmlFor="cta-website-honeypot" className="sr-only">
+                    Leave this field empty
+                  </label>
                   <input
                     type="text"
+                    id="cta-website-honeypot"
                     name="website"
                     className="hidden"
                     tabIndex={-1}
                     autoComplete="off"
+                    aria-hidden="true"
                   />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

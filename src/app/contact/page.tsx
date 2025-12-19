@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ContactForm } from "@/components/forms/ContactForm";
@@ -47,8 +48,23 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-12 lg:pt-40 lg:pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-12 lg:pt-40 lg:pb-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/vending1crop-1.png"
+            alt="CNC Vending Contact"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
+          {/* Bottom fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-blue-400 font-semibold text-base uppercase tracking-wider">
               Get in Touch
@@ -142,7 +158,7 @@ export default function ContactPage() {
             {siteConfig.location.tagline}
           </h2>
           <p className="text-slate-300 mb-6">
-            Based in Central Massachusetts, we provide fast, reliable service
+            Based in Brookfield, Massachusetts, we provide fast, reliable service within 60 miles
             throughout the New England region.
           </p>
           <div className="flex flex-wrap justify-center gap-3">

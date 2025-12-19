@@ -12,15 +12,13 @@ export const siteConfig = {
   },
 
   location: {
-    region: "Central Massachusetts",
-    tagline: "Proudly Serving New England",
+    region: "Brookfield, Massachusetts",
+    tagline: "Serving Businesses Within 60 Miles",
     states: [
       "Massachusetts",
       "Rhode Island",
       "Connecticut",
       "New Hampshire",
-      "Vermont",
-      "Maine",
     ],
   },
 
@@ -169,7 +167,7 @@ export const siteConfig = {
     {
       question: "What areas do you serve?",
       answer:
-        "We proudly serve most of New England, with our home base in Central Massachusetts. However, we have partnerships nationwide to help accommodate any location!",
+        "We serve businesses within 60 miles of Brookfield, Massachusetts, with a focus on companies with 100+ employees. However, we have partnerships nationwide to help accommodate any location!",
     },
     {
       question: "How often do you restock?",

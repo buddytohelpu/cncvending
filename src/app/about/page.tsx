@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { Heart, Users, Sparkles, Shield, Clock, ThumbsUp } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -6,7 +7,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "About Us | Family-Owned Vending Company",
   description:
-    "CNC Vending is a family-owned and operated vending company based in Central Massachusetts. We deliver personalized service and custom vending solutions for businesses across New England.",
+    "CNC Vending is a family-owned and operated vending company based in Brookfield, Massachusetts. We deliver personalized service and custom vending solutions for businesses within 60 miles, focusing on companies with 100+ employees.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
@@ -93,7 +94,7 @@ export default function AboutPage() {
                   needs, and shows up when they say they will.
                 </p>
                 <p>
-                  Based in Central Massachusetts, we serve businesses across
+                  Based in Brookfield, Massachusetts, we serve businesses within 60 miles, focusing on
                   New England with a focus on personalized service and
                   custom solutions. Whether you need a simple snack machine
                   or a full micro-market installation, we approach every
