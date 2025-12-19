@@ -84,7 +84,6 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      {/* Honeypot */}
       <label htmlFor="contact-website-honeypot" className="sr-only">
         Leave this field empty
       </label>

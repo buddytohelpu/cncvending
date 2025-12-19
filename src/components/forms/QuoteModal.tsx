@@ -119,7 +119,6 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
               </Dialog.Description>
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Honeypot */}
                 <label htmlFor="website-honeypot" className="sr-only">
                   Leave this field empty
                 </label>
