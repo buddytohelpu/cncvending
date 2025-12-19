@@ -78,27 +78,13 @@ Submitted on: ${new Date().toLocaleString()}
       html: htmlContent.trim(),
     });
 
-    console.log("Email sent successfully");
-
     return NextResponse.json({ success: true });
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    const errorStack = error instanceof Error ? error.stack : undefined;
-    
-    console.error("Email sending error:", {
-      message: errorMessage,
-      stack: errorStack,
-      code: (error as any)?.code,
-      command: (error as any)?.command,
-      response: (error as any)?.response,
-      responseCode: (error as any)?.responseCode,
-    });
-    
+    console.error("Email sending error:", error);
     return NextResponse.json(
       { 
         success: false, 
-        error: "Failed to send email",
-        message: errorMessage,
+        error: "Failed to send email"
       },
       { status: 500 }
     );

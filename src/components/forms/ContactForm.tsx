@@ -72,9 +72,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
         trackFormSubmit("contact_form");
         setSubmitted(true);
       } else {
-        const errorData = await response.json().catch(() => ({}));
-        console.error("Form submission error:", errorData);
-        alert(`There was an error sending your message: ${errorData.message || errorData.error || "Unknown error"}. Please try again or call us directly.`);
+        alert("There was an error sending your message. Please try again or call us directly.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
