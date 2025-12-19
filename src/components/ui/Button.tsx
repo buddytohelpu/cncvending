@@ -16,11 +16,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        "bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 focus:ring-emerald-500 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 active:scale-95",
+        "bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 focus:ring-blue-600 shadow-[0_8px_16px_rgba(29,78,216,0.4),inset_0_-2px_8px_rgba(0,0,0,0.2),inset_0_2px_8px_rgba(255,255,255,0.1)] hover:shadow-[0_12px_24px_rgba(29,78,216,0.5),inset_0_-2px_8px_rgba(0,0,0,0.3),inset_0_2px_12px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 active:scale-95 active:shadow-[0_4px_8px_rgba(29,78,216,0.3),inset_0_2px_8px_rgba(0,0,0,0.3)] border-b-4 border-blue-900/50 active:border-b-2",
       secondary:
         "bg-slate-800 text-white hover:bg-slate-700 focus:ring-slate-500 active:bg-slate-900",
       outline:
-        "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 focus:ring-emerald-500 active:bg-emerald-100",
+        "border-2 border-blue-600 text-blue-700 hover:bg-blue-50 focus:ring-blue-600 active:bg-blue-100",
       ghost:
         "text-slate-600 hover:bg-slate-100 focus:ring-slate-500 active:bg-slate-200",
     };

@@ -66,17 +66,17 @@ export default function ServiceAreaPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center space-x-2 bg-emerald-500/20 rounded-full px-4 py-2 mb-6">
-              <MapPin className="w-4 h-4 text-emerald-400" />
-              <span className="text-emerald-400 font-medium text-sm">
+            <div className="inline-flex items-center space-x-2 bg-blue-500/20 rounded-full px-4 py-2 mb-6">
+              <MapPin className="w-4 h-4 text-blue-400" />
+              <span className="text-blue-400 font-medium text-base">
                 {siteConfig.location.tagline}
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Serving <span className="text-emerald-400">New England</span>{" "}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+              Serving <span className="text-blue-400">New England</span>{" "}
               Businesses
             </h1>
-            <p className="text-xl text-slate-300">
+            <p className="text-xl sm:text-2xl text-slate-300">
               Based in Central Massachusetts, we provide premium vending
               solutions and responsive service across all six New England
               states.
@@ -102,11 +102,11 @@ export default function ServiceAreaPage() {
 
             {/* Content */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
                 Local Service,{" "}
-                <span className="text-emerald-600">Regional Reach</span>
+                <span className="text-blue-600">Regional Reach</span>
               </h2>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="text-xl text-slate-600 mb-8">
                 As a family-owned business based in Central Massachusetts, we
                 understand the unique needs of New England businesses. Our
                 proximity means faster response times, better service, and a
@@ -115,8 +115,8 @@ export default function ServiceAreaPage() {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
-                    <Check className="w-4 h-4 text-emerald-600" />
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
+                    <Check className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">
@@ -128,8 +128,8 @@ export default function ServiceAreaPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
-                    <Check className="w-4 h-4 text-emerald-600" />
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
+                    <Check className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">
@@ -141,8 +141,8 @@ export default function ServiceAreaPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
-                    <Check className="w-4 h-4 text-emerald-600" />
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
+                    <Check className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">
@@ -163,10 +163,10 @@ export default function ServiceAreaPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Areas We <span className="text-emerald-600">Serve</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+              Areas We <span className="text-blue-600">Serve</span>
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-xl text-slate-600">
               From Boston to Burlington, Portland to Providence—we&apos;ve got
               New England covered.
             </p>
@@ -177,15 +177,15 @@ export default function ServiceAreaPage() {
               <div
                 key={region.state}
                 className={`bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ${
-                  region.primary ? "ring-2 ring-emerald-500" : ""
+                  region.primary ? "ring-2 ring-blue-500" : ""
                 }`}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-2xl font-bold text-slate-900">
                     {region.state}
                   </h3>
                   {region.primary && (
-                    <span className="text-xs font-semibold text-emerald-600 bg-emerald-100 px-2 py-1 rounded-full">
+                    <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                       Home Base
                     </span>
                   )}
@@ -194,9 +194,9 @@ export default function ServiceAreaPage() {
                   {region.areas.map((area) => (
                     <li
                       key={area}
-                      className="flex items-center text-slate-600 text-sm"
+                      className="flex items-center text-slate-600 text-base"
                     >
-                      <MapPin className="w-4 h-4 text-emerald-500 mr-2 flex-shrink-0" />
+                      <MapPin className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
                       {area}
                     </li>
                   ))}

@@ -43,29 +43,29 @@ export function Navbar() {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28">
+          <div className="flex items-center justify-between h-28 sm:h-32 lg:h-36">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 sm:space-x-3 touch-manipulation" aria-label="CNC Vending Home">
               <Image
-                src="/images/logo.png"
+                src={isScrolled ? "/images/logo-blue.png" : "/images/logo-white.png"}
                 alt="CNC Vending"
-                width={80}
-                height={80}
-                className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain"
+                width={140}
+                height={140}
+                className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain transition-opacity duration-300"
                 priority
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-10">
+            <div className="hidden lg:flex items-center space-x-8 xl:space-x-10">
               {siteConfig.navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "text-base font-medium transition-colors duration-200",
+                    "text-lg font-medium transition-colors duration-200",
                     isScrolled
-                      ? "text-slate-600 hover:text-emerald-600"
+                      ? "text-slate-600 hover:text-blue-700"
                       : "text-white/90 hover:text-white"
                   )}
                 >
@@ -75,45 +75,45 @@ export function Navbar() {
             </div>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center space-x-5">
+            <div className="hidden lg:flex items-center space-x-6">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 onClick={handlePhoneClick}
                 className={cn(
-                  "flex items-center space-x-2 text-base font-medium transition-colors duration-200",
+                  "flex items-center space-x-2 text-lg font-medium transition-colors duration-200",
                   isScrolled
-                    ? "text-slate-600 hover:text-emerald-600"
+                    ? "text-slate-600 hover:text-blue-700"
                     : "text-white hover:text-white"
                 )}
                 aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
               >
-                <Phone className="w-5 h-5" aria-hidden="true" />
+                <Phone className="w-6 h-6" aria-hidden="true" />
                 <span>{siteConfig.contact.phoneFormatted}</span>
               </a>
-              <Button onClick={handleQuoteClick} size="md">
+              <Button onClick={handleQuoteClick} size="lg">
                 Get a Quote
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden flex items-center space-x-2 sm:space-x-3">
+            <div className="lg:hidden flex items-center space-x-3">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 onClick={handlePhoneClick}
                 className={cn(
-                  "p-3 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation",
+                  "p-3 rounded-lg transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation",
                   isScrolled
-                    ? "text-emerald-600 bg-emerald-50 active:bg-emerald-100"
+                    ? "text-blue-700 bg-blue-50 active:bg-blue-100"
                     : "text-white bg-white/10 active:bg-white/20"
                 )}
                 aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
               >
-                <Phone className="w-5 h-5" aria-hidden="true" />
+                <Phone className="w-6 h-6" aria-hidden="true" />
               </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={cn(
-                  "p-3 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation",
+                  "p-3 rounded-lg transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation",
                   isScrolled
                     ? "text-slate-600 hover:bg-slate-100 active:bg-slate-200"
                     : "text-white hover:bg-white/10 active:bg-white/20"
@@ -121,37 +121,37 @@ export function Navbar() {
                 aria-label={isOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isOpen}
               >
-                {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
+                {isOpen ? <X className="w-7 h-7" aria-hidden="true" /> : <Menu className="w-7 h-7" aria-hidden="true" />}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <div
-          className={cn(
-            "lg:hidden overflow-hidden transition-all duration-300",
-            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          )}
-        >
-          <div className="bg-white border-t border-slate-100 px-4 py-4 space-y-1">
-            {siteConfig.navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-3.5 text-base text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 active:bg-emerald-100 rounded-lg transition-colors touch-manipulation min-h-[48px] flex items-center"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-3">
-              <Button onClick={handleQuoteClick} className="w-full" size="lg">
-                Get a Quote
-              </Button>
+            {/* Mobile Menu */}
+            <div
+              className={cn(
+                "lg:hidden overflow-hidden transition-all duration-300",
+                isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+              )}
+            >
+              <div className="bg-white border-t border-slate-100 px-4 py-4 space-y-1">
+                {siteConfig.navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-4 text-lg text-slate-700 hover:text-blue-700 hover:bg-blue-50 active:bg-blue-100 rounded-lg transition-colors touch-manipulation min-h-[52px] flex items-center font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="pt-4">
+                  <Button onClick={handleQuoteClick} className="w-full" size="lg">
+                    Get a Quote
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
       </nav>
 
       {/* Quote Modal */}
@@ -160,7 +160,7 @@ export function Navbar() {
       {/* Floating Mobile CTA */}
       <button
         onClick={handleQuoteClick}
-        className="lg:hidden fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-5 py-3.5 sm:px-6 rounded-full shadow-xl shadow-emerald-500/40 font-semibold text-sm sm:text-base min-h-[52px] min-w-[120px] flex items-center justify-center space-x-2 hover:shadow-2xl active:scale-95 transition-all duration-200 touch-manipulation"
+        className="lg:hidden fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-gradient-to-r from-blue-700 to-blue-800 text-white px-5 py-3.5 sm:px-6 rounded-full shadow-xl shadow-blue-700/40 font-semibold text-sm sm:text-base min-h-[52px] min-w-[120px] flex items-center justify-center space-x-2 hover:shadow-2xl active:scale-95 transition-all duration-200 touch-manipulation"
         style={{ paddingBottom: `calc(0.875rem + env(safe-area-inset-bottom))` }}
         aria-label="Get a free quote"
       >

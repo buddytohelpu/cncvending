@@ -11,14 +11,14 @@ export function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">
+          <span className="text-blue-700 font-semibold text-base uppercase tracking-wider">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-3 mb-6">
             Frequently Asked{" "}
-            <span className="text-emerald-600">Questions</span>
+            <span className="text-blue-700">Questions</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Got questions? We&apos;ve got answers. If you don&apos;t see what
             you&apos;re looking for, feel free to reach out.
           </p>
@@ -33,7 +33,7 @@ export function FAQ() {
               className="bg-slate-50 rounded-xl overflow-hidden"
             >
               <Accordion.Trigger className="w-full flex items-center justify-between px-6 py-5 text-left group">
-                <span className="font-semibold text-slate-900 pr-8">
+                <span className="font-semibold text-lg text-slate-900 pr-8">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -44,7 +44,7 @@ export function FAQ() {
                 />
               </Accordion.Trigger>
               <Accordion.Content className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
-                <div className="px-6 pb-5 text-slate-600 leading-relaxed">
+                <div className="px-6 pb-5 text-lg text-slate-600 leading-relaxed">
                   {faq.answer}
                 </div>
               </Accordion.Content>

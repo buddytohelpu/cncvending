@@ -22,7 +22,7 @@ export function FinalCTA() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-700 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -37,10 +37,10 @@ export function FinalCTA() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Content */}
           <div className="text-white mb-8 lg:mb-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Ready to Upgrade Your Break Room?
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-white mb-6 sm:mb-8 leading-relaxed">
               Get a quote in 24 hours. No obligation, no pressure—just
               personalized recommendations for your space.
             </p>
@@ -50,10 +50,10 @@ export function FinalCTA() {
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 onClick={() => trackPhoneClick()}
-                className="inline-flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4 hover:bg-white/20 active:bg-white/30 transition-colors touch-manipulation min-h-[48px] text-sm sm:text-base"
+                className="inline-flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4 hover:bg-white/20 active:bg-white/30 transition-colors touch-manipulation min-h-[48px] text-base"
                 aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
               >
-                <Phone className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
+                <Phone className="w-6 h-6 flex-shrink-0" aria-hidden="true" />
                 <span className="font-semibold">
                   {siteConfig.contact.phoneFormatted}
                 </span>
@@ -61,10 +61,10 @@ export function FinalCTA() {
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 onClick={() => trackEmailClick()}
-                className="inline-flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4 hover:bg-white/20 active:bg-white/30 transition-colors touch-manipulation min-h-[48px] text-sm sm:text-base"
+                className="inline-flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4 hover:bg-white/20 active:bg-white/30 transition-colors touch-manipulation min-h-[48px] text-base"
                 aria-label={`Email ${siteConfig.contact.email}`}
               >
-                <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
+                <Mail className="w-6 h-6 flex-shrink-0" aria-hidden="true" />
                 <span className="font-semibold break-all sm:break-normal">{siteConfig.contact.email}</span>
               </a>
             </div>
@@ -74,8 +74,8 @@ export function FinalCTA() {
           <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-2xl">
             {submitted ? (
               <div className="text-center py-8">
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-8 h-8 text-emerald-600" />
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-8 h-8 text-blue-700" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   Request Received!
@@ -86,10 +86,10 @@ export function FinalCTA() {
               </div>
             ) : (
               <>
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
+                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
                   Get Your Free Quote
                 </h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-6">
+                <p className="text-base sm:text-lg text-slate-600 mb-6">
                   Takes less than a minute. We&apos;ll handle the rest.
                 </p>
 
@@ -131,6 +131,19 @@ export function FinalCTA() {
                     type="tel"
                     placeholder="Phone (optional)"
                   />
+
+                  <div>
+                    <label htmlFor="cta-message" className="sr-only">
+                      Additional Notes
+                    </label>
+                    <textarea
+                      id="cta-message"
+                      name="message"
+                      rows={3}
+                      placeholder="Additional notes or questions (optional)"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 transition-colors text-slate-900 placeholder:text-slate-400 bg-white"
+                    />
+                  </div>
 
                   <Button type="submit" className="w-full" size="lg">
                     Request Quote

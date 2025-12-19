@@ -62,14 +62,14 @@ export function WhyUs() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-emerald-400 font-semibold text-sm uppercase tracking-wider">
+          <span className="text-blue-400 font-semibold text-base uppercase tracking-wider">
             Why CNC Vending
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-6">
             Not Your Average{" "}
-            <span className="text-emerald-400">Vending Company</span>
+            <span className="text-blue-400">Vending Company</span>
           </h2>
-          <p className="text-lg text-slate-300">
+          <p className="text-xl text-slate-300">
             We&apos;re a family-owned business that takes pride in delivering
             exceptional service. Here&apos;s what sets us apart.
           </p>
@@ -82,11 +82,11 @@ export function WhyUs() {
               key={benefit.title}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors duration-300"
             >
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-5">
-                <benefit.icon className="w-6 h-6 text-emerald-400" />
+              <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center mb-5">
+                <benefit.icon className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-slate-400">{benefit.description}</p>
+              <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
+              <p className="text-lg text-slate-400">{benefit.description}</p>
             </div>
           ))}
         </div>

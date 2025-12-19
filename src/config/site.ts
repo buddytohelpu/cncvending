@@ -81,25 +81,25 @@ export const siteConfig = {
       ],
     },
     {
-      id: "kegerators",
-      name: "Kegerators",
-      slug: "/solutions/kegerators",
-      shortDescription: "Self-serve nitro brew, kombucha & more",
+      id: "coffee",
+      name: "Coffee & Beverages",
+      slug: "/solutions/coffee",
+      shortDescription: "Premium coffee machines & beverage dispensers",
       description:
-        "Skip the coffee shop line. Bring premium nitro cold brew, kombucha, tea, and energy drinks directly to your team. Just tap, pour, and enjoy.",
+        "Elevate your break room with professional-grade coffee machines and innovative beverage dispensers. From single-serve to high-volume solutions, we deliver café-quality drinks at your workplace.",
       features: [
-        "Nitro cold brew coffee",
-        "Kombucha & wellness drinks",
-        "Energy drinks on tap",
-        "Tea & specialty beverages",
-        "Self-serve convenience",
+        "Single-serve & bean-to-cup machines",
+        "Touchscreen interfaces with QR payment",
+        "Fresh-brewed coffee, espresso & specialty drinks",
+        "On-demand wellness beverages",
+        "Full maintenance & supply management",
       ],
-      image: "/images/kegerators.png",
+      image: "/images/coffee-vending.png",
       locations: [
-        "Creative agencies",
-        "Tech startups",
-        "Co-working spaces",
-        "Modern offices",
+        "Corporate offices",
+        "Healthcare facilities",
+        "Hotels & hospitality",
+        "Educational institutions",
       ],
     },
   ],
@@ -169,7 +169,7 @@ export const siteConfig = {
     {
       question: "What areas do you serve?",
       answer:
-        "We proudly serve all of New England, with our home base in Central Massachusetts. This includes Massachusetts, Rhode Island, Connecticut, New Hampshire, Vermont, and Maine.",
+        "We proudly serve most of New England, with our home base in Central Massachusetts. However, we have partnerships nationwide to help accommodate any location!",
     },
     {
       question: "How often do you restock?",
@@ -189,7 +189,7 @@ export const siteConfig = {
     {
       question: "How long does installation take?",
       answer:
-        "Most installations are completed within 1-2 weeks of approval. We coordinate with your team to minimize disruption and ensure a clean, professional setup.",
+        "Installation and lead time may vary depending on the amenity getting installed. We coordinate with your team to minimize disruption, and ensure a clean, professional setup.",
     },
     {
       question: "What payment methods are accepted?",

@@ -46,14 +46,14 @@ export function Industries() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">
+          <span className="text-blue-700 font-semibold text-base uppercase tracking-wider">
             Industries We Serve
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-3 mb-6">
             Trusted by Businesses{" "}
-            <span className="text-emerald-600">Across New England</span>
+            <span className="text-blue-700">Across New England</span>
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-xl text-slate-600">
             From corporate headquarters to healthcare facilities, we provide
             tailored vending solutions for every environment.
           </p>
@@ -66,13 +66,13 @@ export function Industries() {
               key={industry.name}
               className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
             >
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 transition-colors duration-300">
-                <industry.icon className="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors duration-300" />
+              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                <industry.icon className="w-7 h-7 text-blue-700 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">
                 {industry.name}
               </h3>
-              <p className="text-slate-600">{industry.description}</p>
+              <p className="text-lg text-slate-600">{industry.description}</p>
             </div>
           ))}
         </div>

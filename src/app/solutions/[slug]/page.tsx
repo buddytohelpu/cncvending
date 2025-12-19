@@ -84,13 +84,13 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="inline-block text-emerald-400 font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-blue-400 font-semibold text-base uppercase tracking-wider mb-4">
               Our Solutions
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
               {solution.name}
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
+            <p className="text-xl sm:text-2xl text-white/80 leading-relaxed">
               {solution.description}
             </p>
           </div>
@@ -103,11 +103,11 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
                 What You Get with{" "}
-                <span className="text-emerald-600">{solution.name}</span>
+                <span className="text-blue-600">{solution.name}</span>
               </h2>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="text-xl text-slate-600 mb-8">
                 We handle everything from installation to ongoing maintenance,
                 so you can focus on what matters most—your business.
               </p>
@@ -115,10 +115,10 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
               <ul className="space-y-4">
                 {solution.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
-                      <Check className="w-4 h-4 text-emerald-600" />
+                    <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-0.5">
+                      <Check className="w-4 h-4 text-blue-600" />
                     </div>
-                    <span className="text-slate-700">{feature}</span>
+                    <span className="text-lg text-slate-700">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -142,11 +142,11 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Perfect For These{" "}
-              <span className="text-emerald-600">Locations</span>
+              <span className="text-blue-600">Locations</span>
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-xl text-slate-600">
               {solution.name} work great in a variety of settings. Here are some
               of the most common locations where our clients install them.
             </p>
@@ -158,8 +158,8 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 flex items-center space-x-4"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-emerald-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-blue-600" />
                 </div>
                 <span className="font-medium text-slate-900">{location}</span>
               </div>

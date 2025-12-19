@@ -41,7 +41,7 @@ export function SolutionCTA({ solution }: SolutionCTAProps) {
             <a
               href={`tel:${siteConfig.contact.phone}`}
               onClick={() => trackPhoneClick()}
-              className="flex items-center space-x-2 hover:text-emerald-400 transition-colors"
+              className="flex items-center space-x-2 hover:text-blue-400 transition-colors"
               aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
             >
               <Phone className="w-5 h-5" aria-hidden="true" />
@@ -50,7 +50,7 @@ export function SolutionCTA({ solution }: SolutionCTAProps) {
             <a
               href={`mailto:${siteConfig.contact.email}`}
               onClick={() => trackEmailClick()}
-              className="flex items-center space-x-2 hover:text-emerald-400 transition-colors"
+              className="flex items-center space-x-2 hover:text-blue-400 transition-colors"
               aria-label={`Email ${siteConfig.contact.email}`}
             >
               <Mail className="w-5 h-5" aria-hidden="true" />

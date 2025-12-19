@@ -96,8 +96,8 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
 
           {submitted ? (
             <div className="text-center py-8">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-emerald-600" />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle className="w-8 h-8 text-blue-600" />
               </div>
               <Dialog.Title className="text-2xl font-bold text-slate-900 mb-2">
                 Thank You!
@@ -191,8 +191,8 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
                         className={cn(
                           "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 border",
                           selectedSolutions.includes(solution.id)
-                            ? "bg-emerald-500 text-white border-emerald-500"
-                            : "bg-white text-slate-600 border-slate-200 hover:border-emerald-300"
+                            ? "bg-blue-500 text-white border-blue-500"
+                            : "bg-white text-slate-600 border-slate-200 hover:border-blue-300"
                         )}
                         aria-label={`Select ${solution.label}`}
                         aria-pressed={selectedSolutions.includes(solution.id)}

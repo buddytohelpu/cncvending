@@ -3,10 +3,10 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "CNC Vending transformed our break room into something our employees actually get excited about. The micro-market is always stocked with great options.",
+      "CNC Vending transformed our break room into something our employees actually get excited about. The coffee machines and micro-market are always stocked with great options.",
     author: "Sarah M.",
     role: "Office Manager",
-    company: "Tech Startup, Boston",
+    company: "Tech Startup, Central MA",
     rating: 5,
   },
   {
@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     quote:
-      "The kegerator setup was a game-changer for our office culture. Nitro cold brew on tap has become everyone's favorite perk. Highly recommend!",
+      "The premium coffee setup was a game-changer for our office culture. Fresh espresso and specialty drinks have become everyone's favorite perk. Highly recommend!",
     author: "Jessica L.",
     role: "HR Director",
     company: "Creative Agency, Cambridge",
@@ -33,13 +33,13 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">
+          <span className="text-blue-700 font-semibold text-base uppercase tracking-wider">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 mb-6">
-            What Our <span className="text-emerald-600">Clients</span> Say
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-3 mb-6">
+            What Our <span className="text-blue-700">Clients</span> Say
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-xl text-slate-600">
             Don&apos;t just take our word for it. Here&apos;s what businesses
             across New England have to say about working with CNC Vending.
           </p>
@@ -66,26 +66,25 @@ export function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-slate-600 leading-relaxed mb-6 relative z-10">
+              <p className="text-lg text-slate-600 leading-relaxed mb-6 relative z-10">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               {/* Author */}
               <div className="border-t border-slate-100 pt-6">
-                <p className="font-semibold text-slate-900">
+                <p className="font-semibold text-lg text-slate-900">
                   {testimonial.author}
                 </p>
-                <p className="text-sm text-slate-500">{testimonial.role}</p>
-                <p className="text-sm text-emerald-600">{testimonial.company}</p>
+                <p className="text-base text-slate-500">{testimonial.role}</p>
+                <p className="text-base text-blue-700">{testimonial.company}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Note */}
-        <p className="text-center text-sm text-slate-400 mt-8">
-          * Names and details have been modified to protect client privacy.
-          Real testimonials available upon request.
+        <p className="text-center text-base text-slate-400 mt-8">
+          * Introductions and references available upon request.
         </p>
       </div>
     </section>
