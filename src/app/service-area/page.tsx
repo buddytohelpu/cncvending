@@ -113,7 +113,7 @@ export default function ServiceAreaPage() {
               </h2>
               <p className="text-xl text-slate-600 mb-8">
                 As a family-owned business based in Brookfield, Massachusetts, we
-                serve businesses within a 60-mile radius, with a focus on companies with 100+ employees. Our
+                serve businesses within a 60-mile radius. Our
                 proximity means faster response times, better service, and a
                 team that truly knows your region.
               </p>
