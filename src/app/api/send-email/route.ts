@@ -2,16 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const getTransporter = () => {
+  const smtpHost = process.env.SMTP_HOST;
+  const smtpPort = process.env.SMTP_PORT;
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
   
-  if (!smtpUser || !smtpPass) {
-    throw new Error("SMTP credentials not configured");
+  if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
+    throw new Error("SMTP credentials not configured. Please set SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS environment variables.");
   }
 
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "mail.smtp2go.com",
-    port: parseInt(process.env.SMTP_PORT || "2525"),
+    host: smtpHost,
+    port: parseInt(smtpPort),
     secure: false,
     auth: {
       user: smtpUser,
@@ -33,6 +35,11 @@ export async function POST(request: NextRequest) {
 
     const { formType, ...formData } = body;
     const transporter = getTransporter();
+    const smtpUser = process.env.SMTP_USER!;
+    const smtpHost = process.env.SMTP_HOST!;
+
+    // Construct from email - use SMTP_FROM if provided, otherwise construct from SMTP_USER and domain
+    const fromEmail = process.env.SMTP_FROM || `"CNC Vending Website" <${smtpUser}@${smtpHost.replace('mail.', '')}>`;
 
     const subject = `New ${formType || "Contact"} Form Submission - CNC Vending`;
     
@@ -70,7 +77,7 @@ Submitted on: ${new Date().toLocaleString()}
     `;
 
     await transporter.sendMail({
-      from: `"CNC Vending Website" <${process.env.SMTP_USER}@smtp2go.com>`,
+      from: fromEmail,
       to: "team@cnc-vending.com",
       replyTo: formData.email || "team@cnc-vending.com",
       subject,
