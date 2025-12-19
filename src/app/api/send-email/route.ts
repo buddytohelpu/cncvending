@@ -35,11 +35,12 @@ export async function POST(request: NextRequest) {
 
     const { formType, ...formData } = body;
     const transporter = getTransporter();
-    const smtpUser = process.env.SMTP_USER!;
-    const smtpHost = process.env.SMTP_HOST!;
 
-    // Construct from email - use SMTP_FROM if provided, otherwise construct from SMTP_USER and domain
-    const fromEmail = process.env.SMTP_FROM || `"CNC Vending Website" <${smtpUser}@${smtpHost.replace('mail.', '')}>`;
+    // Use SMTP_FROM environment variable - must be set to avoid exposing SMTP_USER in email address
+    const fromEmail = process.env.SMTP_FROM;
+    if (!fromEmail) {
+      throw new Error("SMTP_FROM environment variable is required");
+    }
 
     const subject = `New ${formType || "Contact"} Form Submission - CNC Vending`;
     
