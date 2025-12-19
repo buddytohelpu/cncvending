@@ -7,14 +7,14 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Service Area | Serving All of New England",
   description:
-    "CNC Vending serves businesses within 60 miles of Brookfield, Massachusetts, focusing on companies with 100+ employees in Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
+    "CNC Vending serves businesses within 60 miles of Brookfield, Massachusetts in Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
   alternates: {
     canonical: `${siteConfig.url}/service-area`,
   },
   openGraph: {
     title: "Service Area | CNC Vending - Proudly Serving New England",
     description:
-      "CNC Vending serves businesses within 60 miles of Brookfield, MA, focusing on large companies (100+ employees) across Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
+      "CNC Vending serves businesses within 60 miles of Brookfield, MA across Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
     url: `${siteConfig.url}/service-area`,
   },
 };

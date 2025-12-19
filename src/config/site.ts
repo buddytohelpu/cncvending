@@ -167,7 +167,7 @@ export const siteConfig = {
     {
       question: "What areas do you serve?",
       answer:
-        "We serve businesses within 60 miles of Brookfield, Massachusetts, with a focus on companies with 100+ employees. However, we have partnerships nationwide to help accommodate any location!",
+        "We serve businesses within 60 miles of Brookfield, Massachusetts. However, we have partnerships nationwide to help accommodate any location!",
     },
     {
       question: "How often do you restock?",

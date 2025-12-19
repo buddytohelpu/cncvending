@@ -7,7 +7,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "About Us | Family-Owned Vending Company",
   description:
-    "CNC Vending is a family-owned and operated vending company based in Brookfield, Massachusetts. We deliver personalized service and custom vending solutions for businesses within 60 miles, focusing on companies with 100+ employees.",
+    "CNC Vending is a family-owned and operated vending company based in Brookfield, Massachusetts. We deliver personalized service and custom vending solutions for businesses within 60 miles.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
