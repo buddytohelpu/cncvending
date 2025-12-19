@@ -6,32 +6,33 @@ import { siteConfig } from "@/config/site";
 export function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand */}
-          <div className="space-y-6">
-            <Link href="/" className="flex items-center space-x-3" aria-label="CNC Vending Home">
+          <div>
+            <Link href="/" className="inline-block mb-3" aria-label="CNC Vending Home">
               <Image
                 src="/images/logo-white.png"
                 alt="CNC Vending"
                 width={120}
                 height={120}
-                className="w-32 h-32 sm:w-36 sm:h-36 object-contain"
+                className="w-32 h-32 sm:w-36 sm:h-36 object-contain object-center scale-110"
+                style={{ marginLeft: '-8px', marginRight: '-8px', marginTop: '-4px', marginBottom: '-4px' }}
               />
             </Link>
-            <p className="text-slate-400 text-base leading-relaxed">
+            <p className="text-slate-400 text-base leading-relaxed mb-4">
               Premium vending solutions and micro-markets for New England
               businesses. Family-owned, white-glove service.
             </p>
             <div className="flex items-center space-x-2 text-blue-500">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5 flex-shrink-0" />
               <span className="text-base">{siteConfig.location.tagline}</span>
             </div>
           </div>
 
           {/* Solutions */}
           <div>
-            <h4 className="font-semibold text-xl mb-6">Solutions</h4>
+            <h4 className="font-semibold text-xl mb-4">Solutions</h4>
             <ul className="space-y-2.5 sm:space-y-3">
               {siteConfig.solutions.map((solution) => (
                 <li key={solution.id}>
@@ -56,7 +57,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-xl mb-6">Company</h4>
+            <h4 className="font-semibold text-xl mb-4">Company</h4>
             <ul className="space-y-2.5 sm:space-y-3">
               <li>
                 <Link
@@ -95,7 +96,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-xl mb-6">Get in Touch</h4>
+            <h4 className="font-semibold text-xl mb-4">Get in Touch</h4>
             <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a
@@ -122,7 +123,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <div className="border-t border-slate-800 mt-8 sm:mt-10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-slate-500 text-base">
             © {new Date().getFullYear()} CNC Vending. All rights reserved.
           </p>

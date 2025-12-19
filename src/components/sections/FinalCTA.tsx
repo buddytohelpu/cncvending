@@ -103,34 +103,54 @@ export function FinalCTA() {
                   />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="cta-name" className="sr-only">
+                        Your Name
+                      </label>
+                      <Input
+                        id="cta-name"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="cta-company" className="sr-only">
+                        Company
+                      </label>
+                      <Input
+                        id="cta-company"
+                        name="company"
+                        placeholder="Company"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="cta-email" className="sr-only">
+                      Email
+                    </label>
                     <Input
-                      id="cta-name"
-                      name="name"
-                      placeholder="Your Name"
-                      required
-                    />
-                    <Input
-                      id="cta-company"
-                      name="company"
-                      placeholder="Company"
+                      id="cta-email"
+                      name="email"
+                      type="email"
+                      placeholder="Email"
                       required
                     />
                   </div>
 
-                  <Input
-                    id="cta-email"
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    required
-                  />
-
-                  <Input
-                    id="cta-phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="Phone (optional)"
-                  />
+                  <div>
+                    <label htmlFor="cta-phone" className="sr-only">
+                      Phone (optional)
+                    </label>
+                    <Input
+                      id="cta-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="Phone (optional)"
+                    />
+                  </div>
 
                   <div>
                     <label htmlFor="cta-message" className="sr-only">

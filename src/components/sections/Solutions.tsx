@@ -62,10 +62,9 @@ export function Solutions() {
                 </ul>
                 <Link
                   href={solution.slug}
-                  className="inline-flex items-center text-blue-700 font-semibold hover:text-emerald-700 active:text-emerald-800 group/link touch-manipulation min-h-[44px]"
-                  aria-label={`Learn more about ${solution.name}`}
+                  className="inline-flex items-center text-blue-700 font-semibold hover:text-blue-800 active:text-blue-900 group/link touch-manipulation min-h-[44px]"
                 >
-                  <span>Learn more</span>
+                  <span>Learn more about {solution.name}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
               </div>
@@ -80,9 +79,8 @@ export function Solutions() {
             <Link
               href="/solutions/vending"
               className="text-blue-700 font-semibold hover:underline"
-              aria-label="Learn more about traditional vending solutions"
             >
-              Learn about traditional vending →
+              Learn about traditional vending solutions →
             </Link>
           </p>
         </div>
