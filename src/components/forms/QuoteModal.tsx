@@ -51,12 +51,10 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     
-    // Honeypot check
     if (formData.get("website")) {
       return;
     }
 
-    // In production, send to your backend
     console.log("Form submitted:", Object.fromEntries(formData.entries()));
     console.log("Selected solutions:", selectedSolutions);
     
@@ -75,7 +73,6 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
       trackFormOpen("quote_modal");
     }
     if (!newOpen) {
-      // Reset form state when closing
       setTimeout(() => {
         setSubmitted(false);
         setSelectedSolutions([]);
@@ -88,17 +85,16 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
-        <Dialog.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[calc(100%-2rem)] max-w-lg max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-5 sm:p-6 md:p-8 mx-4 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95">
+        <Dialog.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-lg max-h-[95vh] sm:max-h-[90vh] overflow-y-auto bg-white rounded-xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 md:p-8 mx-2 sm:mx-4 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 touch-manipulation">
           {/* Close Button */}
           <Dialog.Close 
-            className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2.5 sm:p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Close quote form"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </Dialog.Close>
 
           {submitted ? (
-            /* Success State */
             <div className="text-center py-8">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-8 h-8 text-emerald-600" />
@@ -114,7 +110,6 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
               </Button>
             </div>
           ) : (
-            /* Form */
             <>
               <Dialog.Title className="text-2xl font-bold text-slate-900 mb-2">
                 Get a Free Quote

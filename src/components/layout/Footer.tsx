@@ -6,8 +6,8 @@ import { siteConfig } from "@/config/site";
 export function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-3" aria-label="CNC Vending Home">
@@ -32,12 +32,12 @@ export function Footer() {
           {/* Solutions */}
           <div>
             <h4 className="font-semibold text-lg mb-6">Solutions</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5 sm:space-y-3">
               {siteConfig.solutions.map((solution) => (
                 <li key={solution.id}>
                   <Link
                     href={solution.slug}
-                    className="text-slate-400 hover:text-emerald-400 transition-colors text-sm"
+                    className="text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors text-sm block py-1 touch-manipulation min-h-[32px] flex items-center"
                   >
                     {solution.name}
                   </Link>
@@ -57,11 +57,11 @@ export function Footer() {
           {/* Company */}
           <div>
             <h4 className="font-semibold text-lg mb-6">Company</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5 sm:space-y-3">
               <li>
                 <Link
                   href="/about"
-                  className="text-slate-400 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors text-sm block py-1 touch-manipulation min-h-[32px] flex items-center"
                 >
                   About Us
                 </Link>
@@ -69,7 +69,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/service-area"
-                  className="text-slate-400 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors text-sm block py-1 touch-manipulation min-h-[32px] flex items-center"
                 >
                   Service Area
                 </Link>
@@ -77,7 +77,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/#faq"
-                  className="text-slate-400 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors text-sm block py-1 touch-manipulation min-h-[32px] flex items-center"
                 >
                   FAQ
                 </Link>
@@ -85,7 +85,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-slate-400 hover:text-emerald-400 transition-colors text-sm"
+                  className="text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors text-sm block py-1 touch-manipulation min-h-[32px] flex items-center"
                 >
                   Contact
                 </Link>
@@ -96,25 +96,25 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-lg mb-6">Get in Touch</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="flex items-center space-x-3 text-slate-400 hover:text-emerald-400 transition-colors"
+                  className="flex items-center space-x-3 text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors touch-manipulation min-h-[44px]"
                   aria-label={`Call ${siteConfig.contact.phoneFormatted}`}
                 >
-                  <Phone className="w-5 h-5" aria-hidden="true" />
-                  <span>{siteConfig.contact.phoneFormatted}</span>
+                  <Phone className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
+                  <span className="text-sm sm:text-base">{siteConfig.contact.phoneFormatted}</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-center space-x-3 text-slate-400 hover:text-emerald-400 transition-colors"
+                  className="flex items-center space-x-3 text-slate-400 hover:text-emerald-400 active:text-emerald-300 transition-colors touch-manipulation min-h-[44px]"
                   aria-label={`Email ${siteConfig.contact.email}`}
                 >
-                  <Mail className="w-5 h-5" aria-hidden="true" />
-                  <span>{siteConfig.contact.email}</span>
+                  <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
+                  <span className="text-sm sm:text-base break-all sm:break-normal">{siteConfig.contact.email}</span>
                 </a>
               </li>
             </ul>

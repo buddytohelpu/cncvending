@@ -49,7 +49,6 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
-    // Honeypot check
     if (formData.get("website")) {
       return;
     }

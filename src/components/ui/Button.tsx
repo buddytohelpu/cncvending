@@ -12,23 +12,23 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+      "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none touch-manipulation active:scale-95";
 
     const variants = {
       primary:
-        "bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 focus:ring-emerald-500 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5",
+        "bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 focus:ring-emerald-500 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 active:scale-95",
       secondary:
-        "bg-slate-800 text-white hover:bg-slate-700 focus:ring-slate-500",
+        "bg-slate-800 text-white hover:bg-slate-700 focus:ring-slate-500 active:bg-slate-900",
       outline:
-        "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 focus:ring-emerald-500",
+        "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 focus:ring-emerald-500 active:bg-emerald-100",
       ghost:
-        "text-slate-600 hover:bg-slate-100 focus:ring-slate-500",
+        "text-slate-600 hover:bg-slate-100 focus:ring-slate-500 active:bg-slate-200",
     };
 
     const sizes = {
       sm: "px-4 py-2.5 text-sm min-h-[44px]",
-      md: "px-6 py-3.5 text-base min-h-[48px]",
-      lg: "px-8 py-4 text-lg min-h-[52px]",
+      md: "px-5 py-3 sm:px-6 sm:py-3.5 text-sm sm:text-base min-h-[48px]",
+      lg: "px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg min-h-[52px]",
     };
 
     return (

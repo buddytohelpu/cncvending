@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { siteConfig } from "@/config/site";
 
 const geistSans = Geist({
@@ -17,6 +19,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
   title: {
     default: "CNC Vending | Modern Vending Solutions",
     template: `%s | CNC Vending`,
@@ -80,10 +88,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add Google Search Console verification code here when available
-    // google: "your-verification-code",
-  },
+  verification: {},
   category: "Business Services",
 };
 
@@ -129,6 +134,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics />
+        <PageViewTracker />
         <Navbar />
         <main>{children}</main>
         <Footer />

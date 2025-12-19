@@ -1,7 +1,13 @@
-/**
- * Analytics tracking utility
- * Replace with your actual analytics implementation (Google Analytics, Mixpanel, etc.)
- */
+declare global {
+  interface Window {
+    gtag?: (
+      command: "config" | "event" | "js" | "set",
+      targetId: string | Date,
+      config?: Record<string, any>
+    ) => void;
+    dataLayer?: any[];
+  }
+}
 
 type TrackingEvent =
   | "cta_click"
@@ -24,21 +30,13 @@ export function trackEvent(
 ): void {
   const payload: TrackingPayload = { event, properties };
 
-  // Log in development
   if (process.env.NODE_ENV === "development") {
     console.log("[Analytics]", payload);
   }
 
-  // TODO: Replace with actual analytics implementation
-  // Example: Google Analytics 4
-  // if (typeof window !== 'undefined' && window.gtag) {
-  //   window.gtag('event', event, properties);
-  // }
-
-  // Example: Mixpanel
-  // if (typeof window !== 'undefined' && window.mixpanel) {
-  //   window.mixpanel.track(event, properties);
-  // }
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", event, properties);
+  }
 }
 
 export function trackPhoneClick(): void {

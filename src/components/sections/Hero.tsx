@@ -47,18 +47,18 @@ export function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-32 lg:pt-44 lg:pb-40">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 sm:pt-36 sm:pb-32 lg:pt-44 lg:pb-40">
           <div className="max-w-3xl">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-6 sm:mb-8">
               <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-medium">
+              <span className="text-white/90 text-xs sm:text-sm font-medium">
                 Premium Vending for New England Businesses
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.2] sm:leading-tight mb-4 sm:mb-6">
               Modern Vending &{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
                 Micro-Markets
@@ -67,36 +67,36 @@ export function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-6 sm:mb-8 leading-relaxed">
               Fast restocking. Modern payment options. Custom product selection.
               White-glove service from a family-owned company that treats your
               business like our own.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button onClick={handleQuoteClick} size="lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-12">
+              <Button onClick={handleQuoteClick} size="lg" className="w-full sm:w-auto">
                 Get a Free Quote
               </Button>
               <Button
                 onClick={handleScrollToSolutions}
                 variant="outline"
                 size="lg"
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white"
+                className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
                 See Solutions
               </Button>
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {trustBadges.map((badge) => (
                 <div
                   key={badge.text}
-                  className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3"
+                  className="flex items-center space-x-2 sm:space-x-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg sm:rounded-xl px-3 py-2.5 sm:px-4 sm:py-3"
                 >
-                  <badge.icon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                  <span className="text-white/90 text-sm font-medium">
+                  <badge.icon className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 flex-shrink-0" />
+                  <span className="text-white/90 text-xs sm:text-sm font-medium leading-tight">
                     {badge.text}
                   </span>
                 </div>

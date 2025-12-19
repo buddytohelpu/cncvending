@@ -24,9 +24,7 @@ export const siteConfig = {
     ],
   },
 
-  social: {
-    // Add social links when available
-  },
+  social: {},
 
   navigation: [
     { name: "Solutions", href: "/#solutions" },

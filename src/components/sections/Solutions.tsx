@@ -7,25 +7,25 @@ import { siteConfig } from "@/config/site";
 
 export function Solutions() {
   return (
-    <section id="solutions" className="py-24 bg-white">
+    <section id="solutions" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span className="text-emerald-600 font-semibold text-xs sm:text-sm uppercase tracking-wider">
             Our Solutions
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 mb-4 sm:mb-6 leading-tight">
             Vending Solutions That{" "}
             <span className="text-emerald-600">Elevate</span> Your Space
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-base sm:text-lg text-slate-600 px-2">
             From premium micro-markets to self-serve kegerators, we deliver
             modern amenities that keep your team satisfied and productive.
           </p>
         </div>
 
         {/* Solution Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {siteConfig.solutions.map((solution) => (
             <div
               key={solution.id}
@@ -47,26 +47,26 @@ export function Solutions() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <p className="text-slate-600 mb-4">{solution.shortDescription}</p>
+              <div className="p-5 sm:p-6">
+                <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed">{solution.shortDescription}</p>
                 <ul className="space-y-2 mb-6">
                   {solution.features.slice(0, 3).map((feature, i) => (
                     <li
                       key={i}
-                      className="flex items-center text-sm text-slate-500"
+                      className="flex items-start text-sm text-slate-500 leading-relaxed"
                     >
-                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3" />
-                      {feature}
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3 mt-1.5 flex-shrink-0" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={solution.slug}
-                  className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 group/link"
+                  className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 active:text-emerald-800 group/link touch-manipulation min-h-[44px]"
                   aria-label={`Learn more about ${solution.name}`}
                 >
-                  Learn more about {solution.name}
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
               </div>
             </div>
