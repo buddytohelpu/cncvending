@@ -34,7 +34,9 @@ export function FinalCTA() {
         trackFormSubmit("final_cta");
         setSubmitted(true);
       } else {
-        alert("There was an error submitting your request. Please try again or call us directly.");
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Form submission error:", errorData);
+        alert(`There was an error submitting your request: ${errorData.message || errorData.error || "Unknown error"}. Please try again or call us directly.`);
       }
     } catch (error) {
       console.error("Form submission error:", error);
