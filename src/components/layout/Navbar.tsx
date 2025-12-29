@@ -90,7 +90,7 @@ export function Navbar() {
                 <Phone className="w-6 h-6" aria-hidden="true" />
                 <span>{siteConfig.contact.phoneFormatted}</span>
               </a>
-              <Button onClick={handleQuoteClick} size="lg">
+              <Button onClick={handleQuoteClick} size="md">
                 Learn More
               </Button>
             </div>
@@ -146,7 +146,7 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="pt-4">
-                  <Button onClick={handleQuoteClick} className="w-full" size="lg">
+                  <Button onClick={handleQuoteClick} className="w-full" size="md">
                     Learn More
                   </Button>
                 </div>

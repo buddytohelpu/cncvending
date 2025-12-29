@@ -76,7 +76,7 @@ export function Hero() {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-12">
-              <Button onClick={handleQuoteClick} size="lg" className="w-full sm:w-auto">
+              <Button onClick={handleQuoteClick} size="md" className="w-full sm:w-auto">
                 Learn More
               </Button>
               <Button

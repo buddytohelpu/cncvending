@@ -32,7 +32,7 @@ export function SolutionCTA({ solution }: SolutionCTAProps) {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Button onClick={handleQuoteClick} size="lg">
+            <Button onClick={handleQuoteClick} size="md">
               Learn More
             </Button>
           </div>
