@@ -41,7 +41,7 @@ export function Testimonials() {
           </h2>
           <p className="text-xl text-slate-600">
             Don&apos;t just take our word for it. Here&apos;s what businesses
-            across New England have to say about working with CNC Vending.
+            across Massachusetts, Rhode Island, Connecticut, and New Hampshire have to say about working with CNC Vending.
           </p>
         </div>
 

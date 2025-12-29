@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "CNC Vending",
-  tagline: "Modern Vending & Micro-Markets for New England Businesses",
+  tagline: "Modern Vending & Micro-Markets for Central Massachusetts Businesses",
   description:
     "Premium vending machines, micro-markets & coffee solutions for businesses within 60 miles of Brookfield, MA. Family-owned vending services.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://cnc-vending.com",
@@ -158,7 +158,7 @@ export const siteConfig = {
 
   trustBadges: [
     { text: "Family-Owned", icon: "heart" },
-    { text: "Serving New England", icon: "map" },
+    { text: "Serving 4 States", icon: "map" },
     { text: "Fast Response", icon: "clock" },
     { text: "Custom Solutions", icon: "settings" },
   ],

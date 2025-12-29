@@ -51,7 +51,7 @@ export function Industries() {
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-3 mb-6">
             Trusted by Businesses{" "}
-            <span className="text-blue-700">Across New England</span>
+            <span className="text-blue-700">Across 4 States</span>
           </h2>
           <p className="text-xl text-slate-600">
             From corporate headquarters to healthcare facilities, we provide

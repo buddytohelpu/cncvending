@@ -94,8 +94,8 @@ export default function AboutPage() {
                   needs, and shows up when they say they will.
                 </p>
                 <p>
-                  Based in Brookfield, Massachusetts, we serve businesses within 60 miles, focusing on
-                  New England with a focus on personalized service and
+                  Based in Brookfield, Massachusetts, we serve businesses within 60 miles across
+                  Massachusetts, Rhode Island, Connecticut, and New Hampshire with a focus on personalized service and
                   custom solutions. Whether you need a simple snack machine
                   or a full micro-market installation, we approach every
                   project with the same attention to detail.

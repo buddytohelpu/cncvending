@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us | Get a Free Vending Quote",
   description:
-    "Contact CNC Vending for a free quote on vending machines, micro-markets, and kegerators. Serving businesses across New England. Call (508) 713-1874 or email Team@cnc-vending.com.",
+    "Contact CNC Vending for a free quote on vending machines, micro-markets, and coffee solutions. Serving businesses in MA, RI, CT, and NH. Call (508) 713-1874 or email Team@cnc-vending.com.",
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
@@ -159,7 +159,7 @@ export default function ContactPage() {
           </h2>
           <p className="text-slate-300 mb-6">
             Based in Brookfield, Massachusetts, we provide fast, reliable service within 60 miles
-            throughout the New England region.
+            across Massachusetts, Rhode Island, Connecticut, and New Hampshire.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {siteConfig.location.states.map((state) => (

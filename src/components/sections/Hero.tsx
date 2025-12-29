@@ -9,7 +9,7 @@ import { trackCTAClick } from "@/lib/tracking";
 
 const trustBadges = [
   { text: "Family-Owned", icon: Heart },
-  { text: "Serving New England", icon: MapPin },
+  { text: "Serving 4 States", icon: MapPin },
   { text: "24hr Response", icon: Clock },
   { text: "Custom Solutions", icon: Settings },
 ];
@@ -34,7 +34,7 @@ export function Hero() {
         <div className="absolute inset-0">
           <Image
             src="/images/vending1crop-1.png"
-            alt="Modern vending machines and micro-markets for New England businesses - CNC Vending premium solutions"
+            alt="Modern vending machines and micro-markets for Central Massachusetts businesses - CNC Vending premium solutions"
             fill
             priority
             className="object-cover object-center"
@@ -54,7 +54,7 @@ export function Hero() {
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-6 sm:mb-8">
                 <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
                 <span className="text-white/90 text-sm sm:text-base font-medium">
-                  Premium Vending for New England Businesses
+                  Premium Vending for Central Massachusetts
                 </span>
               </div>
 

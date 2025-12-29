@@ -5,14 +5,14 @@ import { siteConfig } from "@/config/site";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Service Area | Serving All of New England",
+  title: "Service Area | Serving 4 States",
   description:
     "CNC Vending serves businesses within 60 miles of Brookfield, Massachusetts in Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
   alternates: {
     canonical: `${siteConfig.url}/service-area`,
   },
   openGraph: {
-    title: "Service Area | CNC Vending - Proudly Serving New England",
+    title: "Service Area | CNC Vending - Serving MA, RI, CT, NH",
     description:
       "CNC Vending serves businesses within 60 miles of Brookfield, MA across Massachusetts, Rhode Island, Connecticut, and New Hampshire.",
     url: `${siteConfig.url}/service-area`,
