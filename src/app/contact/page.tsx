@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { ContactForm } from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get a Free Vending Quote",
+  title: "Contact Us | Learn More About Our Vending Solutions",
   description:
     "Contact CNC Vending for a free quote on vending machines, micro-markets, and coffee solutions. Serving businesses in MA, RI, CT, and NH. Call (508) 713-1874 or email Team@cnc-vending.com.",
   alternates: {

@@ -132,10 +132,10 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
           ) : (
             <>
               <Dialog.Title className="text-2xl font-bold text-slate-900 mb-2">
-                Get a Free Quote
+                Request Information
               </Dialog.Title>
               <Dialog.Description className="text-slate-600 mb-6">
-                Tell us about your space and we&apos;ll create a custom vending solution.
+                Tell us about your space and we&apos;ll create a custom vending solution (typically at no cost to you).
               </Dialog.Description>
 
               <form onSubmit={handleSubmit} className="space-y-4">

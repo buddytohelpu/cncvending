@@ -28,12 +28,12 @@ export function SolutionCTA({ solution }: SolutionCTAProps) {
           </h2>
           <p className="text-xl text-slate-300 mb-8">
             Let&apos;s discuss how {solution.name.toLowerCase()} can transform
-            your space. Get a free quote in 24 hours.
+            your space. We&apos;ll respond within 24 hours.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Button onClick={handleQuoteClick} size="lg">
-              Get a Free Quote
+              Learn More
             </Button>
           </div>
 

@@ -91,7 +91,7 @@ export function Navbar() {
                 <span>{siteConfig.contact.phoneFormatted}</span>
               </a>
               <Button onClick={handleQuoteClick} size="lg">
-                Get a Quote
+                Learn More
               </Button>
             </div>
 
@@ -147,7 +147,7 @@ export function Navbar() {
                 ))}
                 <div className="pt-4">
                   <Button onClick={handleQuoteClick} className="w-full" size="lg">
-                    Get a Quote
+                    Learn More
                   </Button>
                 </div>
               </div>
@@ -162,9 +162,9 @@ export function Navbar() {
         onClick={handleQuoteClick}
         className="lg:hidden fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-gradient-to-r from-blue-700 to-blue-800 text-white px-5 py-3.5 sm:px-6 rounded-full shadow-xl shadow-blue-700/40 font-semibold text-sm sm:text-base min-h-[52px] min-w-[120px] flex items-center justify-center space-x-2 hover:shadow-2xl active:scale-95 transition-all duration-200 touch-manipulation"
         style={{ paddingBottom: `calc(0.875rem + env(safe-area-inset-bottom))` }}
-        aria-label="Get a free quote"
+        aria-label="Learn more about our services"
       >
-        <span>Get Quote</span>
+        <span>Learn More</span>
       </button>
     </>
   );

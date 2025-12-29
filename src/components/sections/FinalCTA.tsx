@@ -108,10 +108,10 @@ export function FinalCTA() {
             ) : (
               <>
                 <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
-                  Get Your Free Quote
+                  Request Information
                 </h3>
                 <p className="text-base sm:text-lg text-slate-600 mb-6">
-                  Takes less than a minute. We&apos;ll handle the rest.
+                  Takes less than a minute. No cost to most businesses.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
