@@ -172,7 +172,7 @@ export default function ServiceAreaPage() {
               Areas We <span className="text-blue-600">Serve</span>
             </h2>
             <p className="text-xl text-slate-600">
-              Serving major business centers within 60 miles of Brookfield, MA—focusing on areas with large companies and corporate headquarters.
+              Serving major business centers within 60 miles of Brookfield, MA.
             </p>
           </div>
 
